@@ -1,4 +1,4 @@
-COMMIT_ID := $(shell git log|head -n1|awk '{print $$2}'|head -c 8)
+COMMIT_ID := $(shell git log|head -n1|awk '{print $$2}'|head -c8)
 all: build login tag push
 build:
 	docker build -t lab1-udemy-make:$(COMMIT_ID) .
